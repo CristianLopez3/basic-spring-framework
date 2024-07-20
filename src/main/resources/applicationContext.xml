@@ -4,7 +4,13 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <bean id="myTune" class="com.cristian.model.TuneService" ></bean>
 
+    <bean id="myGuitar" class="com.cristian.model.Guitar">
+        <constructor-arg name="tune" ref="myTune" />
+    </bean>
+
+    <bean id="myPiano" class="com.cristian.model.Piano"></bean>
 
 
 </beans>

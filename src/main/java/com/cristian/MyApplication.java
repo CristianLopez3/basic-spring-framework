@@ -1,15 +1,22 @@
 package com.cristian;
 
-import org.springframework.context.annotation.ComponentScan;
+import com.cristian.model.Instrument;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
- * @author CristianLopez3
+ * @author CristianLopez345
  */
 
 public class MyApplication {
 
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        var context =
+                new ClassPathXmlApplicationContext("applicationContext.xml");
+
+        var guitar = context.getBean("myGuitar", Instrument.class);
+        System.out.println(guitar.getTune());
+
+        context.close(); // free resources
     }
 
 }
