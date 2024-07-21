@@ -1,4 +1,4 @@
-package com.cristian.model;
+package com.cristian.xmlconfig.model;
 
 public class Guitar implements Instrument {
 

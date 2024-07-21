@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-       http://www.springframework.org/schema/beans/spring-beans.xsd">
+       http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="myTune" class="com.cristian.model.TuneService" ></bean>
+    <context:component-scan base-package="com.cristian.annotations" />
 
-    <bean id="myGuitar" class="com.cristian.model.Guitar">
-        <constructor-arg name="tune" ref="myTune" />
-    </bean>
+<!--    <bean id="myTune" class="com.cristian.xmlconfig.model.TuneService" ></bean>-->
 
-    <bean id="myPiano" class="com.cristian.model.Piano"></bean>
+<!--    <bean id="myGuitar" class="com.cristian.xmlconfig.model.Guitar">-->
+<!--        <constructor-arg name="tune" ref="myTune" />-->
+<!--    </bean>-->
+
+<!--    <bean id="myPiano" class="com.cristian.xmlconfig.model.Piano"></bean>-->
 
 
 </beans>

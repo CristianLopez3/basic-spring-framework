@@ -1,6 +1,5 @@
-package com.cristian;
+package com.cristian.xmlconfig.model;
 
-import com.cristian.model.Instrument;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
