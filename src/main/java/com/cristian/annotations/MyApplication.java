@@ -9,8 +9,9 @@ public class MyApplication {
         ClassPathXmlApplicationContext context =
                 new ClassPathXmlApplicationContext("applicationContext.xml");
 
-        Instrument guitar = context.getBean("myGuitar", Instrument.class);
+        Instrument guitar = context.getBean("guitar", Instrument.class);
         System.out.println(guitar.getSound());
+        context.close(); // free resources
     }
 
 }
